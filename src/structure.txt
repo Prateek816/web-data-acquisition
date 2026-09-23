@@ -1,0 +1,61 @@
+data-acquisition/
+├── src/
+│   ├── api/
+│   │   ├── contracts.py
+│   │   └── research_api.py
+│   ├── orchestration/
+│   │   └── run_coordinator.py
+│   ├── sources/
+│   │   ├── base.py
+│   │   ├── cslb/
+│   │   │   ├── connector.py
+│   │   │   ├── parser.py
+│   │   │   └── fixtures/
+│   │   ├── ca_sos/
+│   │   │   ├── connector.py
+│   │   │   └── parser.py
+│   │   ├── company_site/
+│   │   │   ├── connector.py
+│   │   │   └── parser.py
+│   │   └── google_places/          # Tier 2 / future
+│   │       └── connector.py
+│   ├── fetch/
+│   │   ├── http_fetcher.py
+│   │   ├── rate_limiter.py
+│   │   └── browser_fetcher.py      # stub only, v0
+│   ├── raw/
+│   │   └── snapshot_store.py
+│   ├── extract/
+│   │   ├── deterministic.py
+│   │   └── llm_extractor.py
+│   ├── normalize/
+│   │   ├── names.py
+│   │   ├── addresses.py
+│   │   ├── phones.py
+│   │   └── domains.py
+│   ├── entities/
+│   │   ├── resolver.py
+│   │   └── review_queue.py
+│   ├── evidence/
+│   │   ├── claim_store.py
+│   │   └── freshness.py
+│   ├── signals/
+│   │   ├── rules.py
+│   │   └── types.py
+│   ├── publish/
+│   │   └── result_builder.py
+│   ├── storage/
+│   │   └── db.py
+│   ├── config/
+│   │   ├── source_policies.py
+│   │   └── settings.py
+│   └── observability/
+│       └── logging.py
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   ├── fixtures/
+│   └── e2e/
+├── scripts/
+│   └── backfill_cslb_county.py
+└── docs/
